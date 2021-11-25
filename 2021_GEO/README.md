@@ -4,10 +4,11 @@
 
 ## link to the recording
 
-Yo can download the recorded workshop from [here](https://drive.google.com/drive/folders/1YmQhFh5omAfkgZa2MoNnSnrOOOH7-eHh?usp=sharing) in google drive. The workshop was held in Persian Language.
+Yo can download the recorded workshop from [here](https://drive.google.com/drive/folders/1YmQhFh5omAfkgZa2MoNnSnrOOOH7-eHh?usp=sharing) in google drive. The workshop was held online in Persian Language.
 
 
 ## index
+
 1. Basic biology
 
 2. Microarray technology
@@ -23,3 +24,7 @@ Yo can download the recorded workshop from [here](https://drive.google.com/drive
 7. Enrichment analysis
 
 
+
+
+
+A workshop by Sina Majidian

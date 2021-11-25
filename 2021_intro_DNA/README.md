@@ -1,13 +1,49 @@
-# workshops
-
-
-Introduction to DNA sequencing data analysis 
+#Workshop: Introduction to DNA sequencing data analysis
 
 
 
-Data are from
-https://github.com/brainstorm/tiny-test-data/tree/master/wgs
+
+## link to the recording
 
 
-Mitocondrial reads from WGS
-The reads in mt_1.fq.gz and mt_2.fq.gz comes from the normal sample of the synthetic dataset 3 of the ICGC-TCGA DREAM challenge. Reads aligning to the mitochontrion were extracted from the aligned BAM file, and converted to fastq format. The dataset is 2x101 paired illumina reads, In total 4597 read pairs. Average coverage after removing duplicate is around 110x, but varies wildly. This provides suffcient depth to test variant calling downstream.
+Yo can download the recorded workshop from [here](https://drive.google.com/drive/folders/1YmQhFh5omAfkgZa2MoNnSnrOOOH7-eHh?usp=sharing) in google drive. The workshop was held online in Persian Language.
+
+
+## dataset
+Datasets are from this [page](https://github.com/brainstorm/tiny-test-data/tree/master/wgs) synthetic dataset of mitochontrion.
+
+
+## index
+
+
+
+1. Basic biology
+   - DNA
+   - UCSC genome browser
+2. DNA sequencing technologies
+   - Sanger
+   - Second generation (Illumina)
+   - Third (Pacbio & ONT)
+   - Single Cell
+3. Bioinformatics workflow
+   - Genome assembly
+   - Read alignment
+   - Variant calling
+4. File formats
+   - fasta format
+   - fastq format
+   - sam format
+   - vcf format
+5. Basic linux
+   - Databases
+   - Genome datasets (NCBI, UCSC)
+   - Sequence Read Archive (SRA)
+   - 1000 Genome project
+   - GIAB
+6. Integrative Genomics Viewer (IGV)
+
+7. Conda & FastQC
+
+
+
+A workshop by Sina Majidian
