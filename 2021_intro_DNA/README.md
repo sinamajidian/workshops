@@ -2,20 +2,11 @@
 # Workshop: Introduction to DNA sequencing data analysis
 
 
-
-
-## link to the recording
-
-
-Yo can download the recorded workshop from [here](https://drive.google.com/drive/folders/1YmQhFh5omAfkgZa2MoNnSnrOOOH7-eHh?usp=sharing) in google drive. The workshop was held online in Persian Language.
-
-
 ## dataset
 Datasets are from this [page](https://github.com/brainstorm/tiny-test-data/tree/master/wgs) synthetic dataset of mitochontrion.
 
 
 ## index
-
 
 
 1. Basic biology
@@ -44,6 +35,14 @@ Datasets are from this [page](https://github.com/brainstorm/tiny-test-data/tree/
 6. Integrative Genomics Viewer (IGV)
 
 7. Conda & FastQC
+
+
+
+
+## link to the recording
+
+
+Yo can download the recorded workshop from [here](https://drive.google.com/drive/folders/1YmQhFh5omAfkgZa2MoNnSnrOOOH7-eHh?usp=sharing) in google drive. The workshop was held online in Persian Language.
 
 
 

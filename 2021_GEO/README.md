@@ -1,11 +1,5 @@
 
-# Workshop:Differential gene expression analysis using GEO2R.
-
-
-
-## link to the recording
-
-Yo can download the recorded workshop from [here](https://drive.google.com/drive/folders/1YmQhFh5omAfkgZa2MoNnSnrOOOH7-eHh?usp=sharing) in google drive. The workshop was held online in Persian Language.
+# Workshop: Differential gene expression analysis using GEO2R.
 
 
 ## index
@@ -23,6 +17,12 @@ Yo can download the recorded workshop from [here](https://drive.google.com/drive
 6. GEO2R
 
 7. Enrichment analysis
+
+
+
+## link to the recording
+
+Yo can download the recorded workshop from [here](https://drive.google.com/drive/folders/1YmQhFh5omAfkgZa2MoNnSnrOOOH7-eHh?usp=sharing) in google drive. The workshop was held online in Persian Language.
 
 
 
