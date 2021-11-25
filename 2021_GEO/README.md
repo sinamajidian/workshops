@@ -1,4 +1,5 @@
-# GEO workshop
+
+# Workshop:Differential gene expression analysis using GEO2R.
 
 
 
