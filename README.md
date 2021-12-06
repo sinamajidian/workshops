@@ -11,3 +11,4 @@ This repo contains the workshops that I have presented so far.
 
 
 
+You can watch recording of workshops on [YouTube](https://www.youtube.com/watch?v=8SbTfKRXzrg&list=PLpJeiop-kO4C4ND6nwWMPfk2cBzpP_VRz).

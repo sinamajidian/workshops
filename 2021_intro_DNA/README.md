@@ -42,7 +42,7 @@ Datasets are from this [page](https://github.com/brainstorm/tiny-test-data/tree/
 ## link to the recording
 
 
-Yo can download the recorded workshop from [here](https://drive.google.com/drive/folders/1YmQhFh5omAfkgZa2MoNnSnrOOOH7-eHh?usp=sharing) in google drive. The workshop was held online in Persian Language.
+Yo can download the recorded workshop from [here](https://drive.google.com/drive/folders/1YmQhFh5omAfkgZa2MoNnSnrOOOH7-eHh?usp=sharing) in google drive  or watch on [YouTube](https://www.youtube.com/watch?v=8SbTfKRXzrg&list=PLpJeiop-kO4C4ND6nwWMPfk2cBzpP_VRz). The workshop was held online in Persian Language.
 
 
 
