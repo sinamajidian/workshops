@@ -1,5 +1,5 @@
 
-# https://nextflow-io.github.io/patterns/publish-process-outputs/
+// https://nextflow-io.github.io/patterns/publish-process-outputs/
 params.in = "$baseDir/sample.fa"
 params.outdir = "results"
 
