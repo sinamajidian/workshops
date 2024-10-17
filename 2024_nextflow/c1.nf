@@ -1,4 +1,4 @@
-# code from nextflow training website
+// code from nextflow training website
 
 
 process sayHello {
