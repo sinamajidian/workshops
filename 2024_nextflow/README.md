@@ -43,6 +43,7 @@ A workflow is a composition of processes, channels and operators.
 ```
 $ cat c1.nf 
 
+// this is a comment
 
 process sayHello {
     output: 
@@ -139,6 +140,31 @@ B>
 ttttttttggggggggg
 ```
 
+## example 3 
+Let's write the output in a file. First add `params.outdir = "results"` in the begining and change the output of `reverese` to `path '*.txt'` 
+
+
+```
+$ nextflow c3.nf 
+ N E X T F L O W   ~  version 24.04.4
+Launching `c3.nf` [elegant_boyd] DSL2 - revision: 15963bc258
+executor >  local (2)
+[81/14f741] splitSequences [100%] 1 of 1 ✔
+[05/10c9a7] reverse        [100%] 1 of 1 ✔
+/vast/1/work/05/10c9a70874f46fc6dc3067f27ec9e5/out.txt
+
+
+$ ls -ath  work/05/10c9a70874f46fc6dc3067f27ec9e5/
+.exitcode  .  out.txt  .command.out  .command.err  seq_2  seq_1  .command.begin  .command.log  .command.sh  .command.run  ..
+
+$ ls results/
+out.txt
+$ cat results/out.txt 
+A>
+ccccccccccaaaaaaaaaaaaaaa
+B>
+ttttttttggggggggg
+```
 
 
 
