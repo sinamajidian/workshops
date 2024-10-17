@@ -141,7 +141,7 @@ ttttttttggggggggg
 ```
 
 ## example 3 
-Let's write the output in a file. First add `params.outdir = "results"` in the begining and change the output of `reverese` to `path '*.txt'` 
+Let's write the output in a file. First add `params.outdir = "results"` in the begining. Also change the output of `reverese` to `path '*.txt'`  and add `publishDir "$params.outdir"` to reverse. See c3.nf file.
 
 
 ```
@@ -152,8 +152,10 @@ executor >  local (2)
 [81/14f741] splitSequences [100%] 1 of 1 ✔
 [05/10c9a7] reverse        [100%] 1 of 1 ✔
 /vast/1/work/05/10c9a70874f46fc6dc3067f27ec9e5/out.txt
+```
 
-
+Note that the files are symlinks. To copy the files to output you can add `mode: 'copy'` at end of  `publishDir`.
+```
 $ ls -ath  work/05/10c9a70874f46fc6dc3067f27ec9e5/
 .exitcode  .  out.txt  .command.out  .command.err  seq_2  seq_1  .command.begin  .command.log  .command.sh  .command.run  ..
 
@@ -167,9 +169,22 @@ ttttttttggggggggg
 ```
 
 
+## channel
+
+In the workflow, we can specify the input as a channel and feed it to a process.
+```
+mych = Channel.of('a', 'b')
+```
+We can use `.out` to take the output of one process. Alternatively, we could define a channel as output of a processs `out= myproc`.  
 
 
+## example 4: exercise 
 
+We want to write three files, each includes the word hello in a different language. The file name should start with the word and end with  `-output.txt`. Then, convert all files to upper letter using `cat file | tr '[a-z]' '[A-Z]'`. 
+
+- Write a process that takes a phrase as input and write it in a file. Name the file as the phrase and `-output.txt`.
+- Write a process that makes all letters in a file upper case `cat '$input_file' | tr '[a-z]' '[A-Z]' > UPPER-${input_file}`.
+- Use workflow to use output of one process as the input of another.
 
 
 
