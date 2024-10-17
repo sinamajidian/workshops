@@ -37,15 +37,16 @@ Usage: nextflow [options] COMMAND [arg...]
 
 ### Example one
 
+This example include a process, which is a "basic processing primitive to execute a user script" and can have input/output/script.
+A workflow is a composition of processes, channels and operators.
+
 ```
-$ cat code1.nf 
+$ cat c1.nf 
 
 
 process sayHello {
-
     output: 
         stdout
-    
     """
     echo 'Hello World!'
     """
@@ -56,22 +57,17 @@ workflow {
 }
 ```
 
-We can run this with `$ nextflow code1.nf`.
-
-Output is 
+We can run this with `$ nextflow code1.nf`. The output is 
 ```
 $ nextflow code1.nf 
-
  N E X T F L O W   ~  version 24.04.4
-
-Launching `code1.nf` [dreamy_poisson] DSL2 - revision: ae29f64ff1
-
+Launching `c1.nf` [dreamy_poisson] DSL2 - revision: ae29f64ff1
 executor >  local (1)
 [a6/3a7d1c] sayHello [100%] 1 of 1 ✔
 Hello World!
 ```
 
-and files
+and the output files are
 ```
 $ ls -at
 .nextflow.log  .nextflow  work  .  ..  code1.nf
@@ -83,6 +79,70 @@ You can compare the name of folders with the line in the log file `[a6/3a7d1c] s
 
 
 ## Ex 2
+
+```
+$ cat sample.fa 
+>A
+aaaaaaaaaaaaaaacccccccccc
+>B
+gggggggggtttttttt
+```
+
+And we have this code including two processes
+
+```
+params.in = "$baseDir/sample.fa"
+
+process splitSequences {
+
+    input:
+    path 'input.fa'
+
+    output:
+    path 'seq_*'
+
+    """
+    awk '/^>/{f="seq_"++d} {print > f}' < input.fa
+    """
+}
+
+process reverse {
+
+    input:
+    path x
+
+    output:
+    stdout
+
+    """
+    cat $x | rev
+    """
+}
+
+workflow {
+    splitSequences(params.in) | reverse  | view
+}
+```
+
+The output is 
+```
+$ nextflow c2.nf 
+ N E X T F L O W   ~  version 24.04.4
+Launching `c2.nf` [angry_bartik] DSL2 - revision: 9e48e57c59
+
+executor >  local (2)
+[ae/cdf5d5] splitSequences [100%] 1 of 1 ✔
+[c4/baeff7] reverse        [100%] 1 of 1 ✔
+A>
+ccccccccccaaaaaaaaaaaaaaa
+B>
+ttttttttggggggggg
+```
+
+
+
+
+
 
 
 
