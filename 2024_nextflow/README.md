@@ -186,6 +186,26 @@ We want to write three files, each includes the word hello in a different langua
 - Write a process that makes all letters in a file upper case `cat '$input_file' | tr '[a-z]' '[A-Z]' > UPPER-${input_file}`.
 - Use workflow to use output of one process as the input of another.
 
+This our desired output
+```
+$ ls results/
+Bonjour-output.txt  Hello-output.txt  Hola-output.txt  UPPER-Bonjour-output.txt  UPPER-Hello-output.txt  UPPER-Hola-output.txt
+$ cat results/UPPER-Bonjour-output.txt
+BONJOUR
+```
+See the answer in [c4.nf](c4.nf). 
+
+```
+$ nextflow c4.nf
+ N E X T F L O W   ~  version 24.04.4
+Launching `c4.nf` [nasty_jepsen] DSL2 - revision: 39890982ee
+executor >  local (6)
+[b7/a480f2] sayHello (2)       [100%] 3 of 3 ✔
+[f5/7c939a] convertToUpper (3) [100%] 3 of 3 ✔
+outt: /vast/1/work/20/b315cef3bf8cf5d65d26d6226c7aa9/Hello-output.txt
+outt: /vast/1/work/6b/48ce7135029172916f6ba50032b057/Hola-output.txt
+outt: /vast/1/work/b7/a480f268fee3599c9188e81b058ea0/Bonjour-output.txt
+```
 
 
 
