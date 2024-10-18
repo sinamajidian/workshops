@@ -226,7 +226,7 @@ wget https://ftp.ncbi.nlm.nih.gov/blast/db/pdbaa.tar.gz
 tar -xf pdbaa.tar.gz
 ```
 
-You can test it out
+You can test it out on these proteins
 ```
 cd ..
 tar -xf proteins10.tar.gz
@@ -235,9 +235,9 @@ tar -xf proteins10.tar.gz
 
 We want to get the sequences of top 10 hits:
 ```
-blastp -db $db/$db_name -query query.fa -outfmt 6 > blast_result
+blastp -db db/pdbaa -query query.fa -outfmt 6 > blast_result
 cat blast_result | head -n 10 | cut -f 2 > top_hits
-blastdbcmd -db $db/$db_name -entry_batch top_hits | head -n 10 > sequences
+blastdbcmd -db db/pdbaa -entry_batch top_hits | head -n 10 > sequences
 ```
 
 
