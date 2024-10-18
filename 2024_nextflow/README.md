@@ -223,14 +223,21 @@ and download the pdb dataset
 ```
 mkdir db; cd db
 wget https://ftp.ncbi.nlm.nih.gov/blast/db/pdbaa.tar.gz
-tar -xf/pdbaa.tar.gz
+tar -xf pdbaa.tar.gz
 ```
 
 You can test it out
 ```
 cd ..
-tar -xf proteins.tar.gz
-blastp -db db/pdbaa  -query  pr/GCF_030413595.fa_1k.fa -outfmt 6  > out_test
+tar -xf proteins10.tar.gz
+```
+
+
+We want to get the sequences of top 10 hits:
+```
+blastp -db $db/$db_name -query query.fa -outfmt 6 > blast_result
+cat blast_result | head -n 10 | cut -f 2 > top_hits
+blastdbcmd -db $db/$db_name -entry_batch top_hits | head -n 10 > sequences
 ```
 
 
