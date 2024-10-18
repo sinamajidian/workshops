@@ -210,6 +210,39 @@ outt: /vast/1/work/b7/a480f268fee3599c9188e81b058ea0/Bonjour-output.txt
 
 
 
+# Ex5:
+
+
+First download the blast exectuables from [here](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/) (for [linux](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.16.0+-x64-linux.tar.gz)).
+Then, you can add the folder to your path
+```
+$ ls ncbi-blast-2.16.0+/bin/blast*
+blastdb_aliastool  blastdbcheck  blastdbcmd  blast_formatter  blast_formatter_vdb  blastn  blastn_vdb  blastp  blast_vdb_cmd  blastx
+```
+and download the pdb dataset
+```
+mkdir db; cd db
+wget https://ftp.ncbi.nlm.nih.gov/blast/db/pdbaa.tar.gz
+tar -xf/pdbaa.tar.gz
+```
+
+You can test it out
+```
+cd ..
+tar -xf proteins.tar.gz
+blastp -db db/pdbaa  -query  pr/GCF_030413595.fa_1k.fa -outfmt 6  > out_test
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
